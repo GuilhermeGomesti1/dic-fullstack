@@ -30,8 +30,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  favorites: [{ type: String }], // Lista de palavras favoritas
-  history: [{ type: String }], // Lista de palavras visualizadas
+  favorites: [{ type: String }],
+  history: [{ type: String }],
 });
 
 const User = mongoose.model("User", userSchema);
@@ -51,7 +51,6 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Rotas de autenticação
 app.post("/auth/register", async (req, res) => {
   try {
     const { email, password } = req.body;

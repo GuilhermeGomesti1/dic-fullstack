@@ -1,5 +1,9 @@
 # Projeto Fullstack Dictionary
 
+## Coodesh Challenge - Dictionary
+
+Este projeto é parte do **Coodesh Fullstack Challenge**. O desafio visa avaliar as habilidades como Fullstack Developer. O objetivo é desenvolver um aplicativo que liste palavras em inglês utilizando a **Free Dictionary API**. O aplicativo deve exibir termos em inglês e gerenciar palavras visualizadas, conforme descrito nos casos de uso abaixo.
+
 ## Backend
 
 ### Configuração e Execução
@@ -86,8 +90,14 @@ register.tsx: Página de Cadastro de usuários.
 
 dashboard.tsx: Página responsável pela renderização do dicionário com o usuário autenticado.
 
+Services/api
+fetchWords: Obtém uma lista de palavras com base na página, na pesquisa e na letra inicial fornecidas.
+fetchPhonetics:  Obtém os dados fonéticos de uma palavra específica.
+fetchFavorites: Obtém a lista de palavras favoritas do usuário.
+fetchViewed: Obtém o histórico de palavras visualizadas pelo usuário.
+
 Componentes
-src/components/Login.js: Componente do formulário de login.
+Login: Componente do formulário de login.
 
 MarkAsViewed: Marca uma palavra como visualizada ao enviar uma solicitação para o backend e executa uma função de callback quando a ação é bem-sucedida.
 
@@ -96,4 +106,6 @@ Providers: Fornece um contexto global para o gerenciamento de estado com o Query
 SearchBar: Exibe uma barra de pesquisa com campo de entrada e botões de pesquisa e retorno, permitindo ao usuário buscar palavras e navegar.
 
 ToggleFavorite: Alterna o status de favorito de uma palavra, enviando uma solicitação para adicionar ou remover a palavra dos favoritos e atualizando a interface de usuário com base no estado.
+
+AlphabetMenu:  Exibe um menu de seleção ou botões para filtrar palavras por letras do alfabeto.
 ```

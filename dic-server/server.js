@@ -118,8 +118,9 @@ app.get("/entries/en", async (req, res) => {
       .exec();
 
     const totalDocs = await Word.countDocuments(filter);
-
+    console.log("Fullstack Challenge 🏅 - Dictionary");
     res.json({
+      message: "Fullstack Challenge 🏅 - Dictionary",
       results: words.map((word) => word.word),
       totalDocs,
       page: parseInt(page),
